@@ -14,20 +14,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @program: 代码
- * @ClassName: ListAreaServlet
- * @version: 1.0
- * @description: 动态获取对应的区域
- * @author: bjpowernode
- * @create: 2022-05-15 21:57
- **/
+ * @author ZSAndroid
+ */
 @WebServlet("/listArea")
 public class ListAreaServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        // TODO: 2022/5/26 查询数据库省市数据，使用fastjson返回JSON字符串到HTML前端给JavaScript转为JSON对象后展示
         String pcode = request.getParameter("pcode");
-
         // 连接数据库，获取所有的对应区域。最终响应一个JSON格式的字符串给WEB前端。
         Connection conn = null;
         PreparedStatement ps = null;
@@ -37,7 +32,7 @@ public class ListAreaServlet extends HttpServlet {
             // 注册驱动
             Class.forName("com.mysql.cj.jdbc.Driver");
             // 获取连接
-            String url = "jdbc:mysql://localhost:3306/bjpowernode?useUnicode=true&characterEncoding=UTF-8";
+            String url = "jdbc:mysql://localhost:3306/mybatisDemo?useUnicode=true&characterEncoding=UTF-8";
             String user = "root";
             String password = "root";
             conn = DriverManager.getConnection(url, user, password);
