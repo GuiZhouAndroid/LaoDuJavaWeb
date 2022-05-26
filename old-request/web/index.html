@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>演示传统请求，以及传统请求的缺点</title>
+</head>
+<body>
+
+<!--直接在浏览器地址栏上输入URL-->
+
+<!--超链接-->
+<a href="/old/request">传统请求（超链接）</a>
+
+<!--form表单提交-->
+<form action="/old/request" method="get">
+    <input type="submit" value="传统请求（form表单提交）">
+</form>
+
+<!--通过JS代码来发送请求-->
+<input type="button" value="传统请求（通过JS代码发送请求）" onclick="sendRequest()">
+
+<script type="text/javascript">
+    function sendRequest(){
+        // 发送请求
+        //window.location.href = ""
+        document.location.href = "/old/request"
+    }
+</script>
+
+</body>
+</html>

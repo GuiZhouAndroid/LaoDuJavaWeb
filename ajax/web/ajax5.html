@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX POST请求验证用户名是否可用</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    window.onload = function(){
+
+        document.getElementById("username").onfocus = function (){
+            document.getElementById("tipMsg").innerHTML = ""
+        }
+
+        document.getElementById("username").onblur = function (){
+            //console.log("正在发送AJAX POST请求验证用户名")
+            // 发送AJAX POST请求
+            // 1.
+            var xhr = new XMLHttpRequest()
+            // 2.
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        document.getElementById("tipMsg").innerHTML = this.responseText
+                    }else{
+                        alert(this.status)
+                    }
+                }
+            }
+            // 3.
+            xhr.open("POST", "/ajax/ajaxrequest4", true)
+            // 4.
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+            // 获取表单数据
+            var username = document.getElementById("username").value
+            xhr.send("uname=" + username)
+        }
+    }
+</script>
+
+用户名：<input type="text" id="username">
+
+<span id="tipMsg"></span>
+
+</body>
+</html>

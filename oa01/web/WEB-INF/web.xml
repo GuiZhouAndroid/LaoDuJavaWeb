@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <!--修改部门-->
+    <servlet>
+        <servlet-name>modify</servlet-name>
+        <servlet-class>com.bjpowernode.oa.web.action.DeptModifyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>modify</servlet-name>
+        <url-pattern>/dept/modify</url-pattern>
+        <!--<url-pattern>/dept/test/abc</url-pattern>-->
+    </servlet-mapping>
+
+    <!--跳转到修改页面-->
+    <servlet>
+        <servlet-name>edit</servlet-name>
+        <servlet-class>com.bjpowernode.oa.web.action.DeptEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>edit</servlet-name>
+        <url-pattern>/dept/edit</url-pattern>
+    </servlet-mapping>
+
+    <!--保存部门-->
+    <servlet>
+        <servlet-name>save</servlet-name>
+        <servlet-class>com.bjpowernode.oa.web.action.DeptSaveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>save</servlet-name>
+        <url-pattern>/dept/save</url-pattern>
+    </servlet-mapping>
+
+    <!--删除部门-->
+    <servlet>
+        <servlet-name>delete</servlet-name>
+        <servlet-class>com.bjpowernode.oa.web.action.DeptDelServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delete</servlet-name>
+        <url-pattern>/dept/delete</url-pattern>
+    </servlet-mapping>
+
+    <!--查看部门列表-->
+    <servlet>
+        <servlet-name>list</servlet-name>
+        <servlet-class>com.bjpowernode.oa.web.action.DeptListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>list</servlet-name>
+        <!--web.xml文件中的这个路径也是以“/”开始的，但是不需要加项目名-->
+        <url-pattern>/dept/list</url-pattern>
+    </servlet-mapping>
+
+    <!--查看部门详细信息-->
+    <servlet>
+        <servlet-name>detail</servlet-name>
+        <servlet-class>com.bjpowernode.oa.web.action.DeptDetailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>detail</servlet-name>
+        <url-pattern>/dept/detail</url-pattern>
+    </servlet-mapping>
+
+</web-app>

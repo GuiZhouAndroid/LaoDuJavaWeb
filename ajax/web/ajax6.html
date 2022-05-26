@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发送AJAX请求，显示学生列表</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById("btn").onclick = function () {
+            // 1.创建核心对象
+            var xhr = new XMLHttpRequest();
+            // 2.注册回调函数
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        //document.getElementById("stutbody").innerHTML = this.responseText
+
+                        // 将json格式的字符串转换成json对象
+                        var stuList = JSON.parse(this.responseText) // 是一个数组，并且数组中有多个学生数据
+                        var html = ""
+                        for (var i = 0; i < stuList.length; i++) {
+                            var stu = stuList[i]
+                            html += "<tr>"
+                            html += "<td>"+(i+1)+"</td>"
+                            html += "<td>"+stu.name+"</td>"
+                            html += "<td>"+stu.age+"</td>"
+                            html += "<td>"+stu.addr+"</td>"
+                            html += "</tr>"
+                        }
+                        document.getElementById("stutbody").innerHTML = html
+
+                    } else {
+                        alert(this.status)
+                    }
+                }
+            }
+            // 3.开启通道
+            xhr.open("GET", "/ajax/ajaxrequest5?t=" + new Date().getTime(), true)
+            // 4.发送请求
+            xhr.send()
+        }
+    }
+</script>
+
+<input type="button" value="显示学员列表" id="btn">
+
+<table width="50%" border="1px">
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>住址</th>
+    </tr>
+    </thead>
+    <tbody id="stutbody">
+    <!--<tr>
+        <td>1</td>
+        <td>张三</td>
+        <td>20</td>
+        <td>北京大兴区</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>李四</td>
+        <td>22</td>
+        <td>北京海淀区</td>
+    </tr>-->
+    </tbody>
+</table>
+
+</body>
+</html>

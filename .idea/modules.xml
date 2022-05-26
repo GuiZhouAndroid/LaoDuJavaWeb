@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LaoDuJavaWeb.iml" filepath="$PROJECT_DIR$/LaoDuJavaWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajax/ajax.iml" filepath="$PROJECT_DIR$/ajax/ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajax-encoding/ajax-encoding.iml" filepath="$PROJECT_DIR$/ajax-encoding/ajax-encoding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fastjson/fastjson.iml" filepath="$PROJECT_DIR$/fastjson/fastjson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsp/jsp.iml" filepath="$PROJECT_DIR$/jsp/jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myweb/myweb.iml" filepath="$PROJECT_DIR$/myweb/myweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa01/oa01.iml" filepath="$PROJECT_DIR$/oa01/oa01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa02/oa02.iml" filepath="$PROJECT_DIR$/oa02/oa02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa03/oa03.iml" filepath="$PROJECT_DIR$/oa03/oa03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa04/oa04.iml" filepath="$PROJECT_DIR$/oa04/oa04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/old-request/old-request.iml" filepath="$PROJECT_DIR$/old-request/old-request.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet01/servlet01.iml" filepath="$PROJECT_DIR$/servlet01/servlet01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet02/servlet02.iml" filepath="$PROJECT_DIR$/servlet02/servlet02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet03/servlet03.iml" filepath="$PROJECT_DIR$/servlet03/servlet03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet04/servlet04.iml" filepath="$PROJECT_DIR$/servlet04/servlet04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet05/servlet05.iml" filepath="$PROJECT_DIR$/servlet05/servlet05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet06/servlet06.iml" filepath="$PROJECT_DIR$/servlet06/servlet06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet07/servlet07.iml" filepath="$PROJECT_DIR$/servlet07/servlet07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet08/servlet08.iml" filepath="$PROJECT_DIR$/servlet08/servlet08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet09/servlet09.iml" filepath="$PROJECT_DIR$/servlet09/servlet09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet10/servlet10.iml" filepath="$PROJECT_DIR$/servlet10/servlet10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet11/servlet11.iml" filepath="$PROJECT_DIR$/servlet11/servlet11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet12/servlet12.iml" filepath="$PROJECT_DIR$/servlet12/servlet12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet13/servlet13.iml" filepath="$PROJECT_DIR$/servlet13/servlet13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet14/servlet14.iml" filepath="$PROJECT_DIR$/servlet14/servlet14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet15/servlet15.iml" filepath="$PROJECT_DIR$/servlet15/servlet15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet16/servlet16.iml" filepath="$PROJECT_DIR$/servlet16/servlet16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template/template.iml" filepath="$PROJECT_DIR$/template/template.iml" />
+    </modules>
+  </component>
+</project>

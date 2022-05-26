@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试我们自己编写jQuery库（jQuery本质上就是JS的库）</title>
+</head>
+<body>
+
+<!--使用jQuery库的第一件事，是把jQuery库引进来-->
+<script type="text/javascript" src="js/jQuery-1.0.0.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $("#btn").click(function(){
+            //alert("hello")
+            // 获取文本框内容
+            alert($("#usercode").val())
+            // 修改文本框的value
+            $("#usercode").val("张三")
+            // 设置div内容
+            $("#mydiv").html("我们自己封装的jQuery不是也挺好吗！！！")
+        })
+    })
+</script>
+
+<button id="btn">hello</button><br>
+用户代码：<input type="text" id="usercode"><br>
+<div id="mydiv"></div>
+</body>
+</html>

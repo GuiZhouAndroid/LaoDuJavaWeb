@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>省市联动</title>
+</head>
+<body>
+
+<!--引入我们自己编写的jQuery库-->
+<script type="text/javascript" src="/ajax/js/jQuery-1.0.0.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        // 发送ajax请求，获取所有的省份。省份的pcode是null
+        $.ajax({
+            type : "get",
+            url : "/ajax/listArea",
+            data : "t=" + new Date().getTime(),
+            async : true,
+            success : function(jsonArr){
+                // [{"code":"001", "name":"河北省"},{"code":"002", "name":"河南省"}]
+                // 以上格式的json是我们自己设计出来的，希望服务器能够给我们返回这样一个json格式的字符串。
+                var html = "<option value=''>--请选择省份--</option>";
+                for (var i = 0; i < jsonArr.length; i++) {
+                    var area = jsonArr[i]
+                    html += "<option value='"+area.code+"'>"+area.name+"</option>"
+                }
+                $("#province").html(html)
+            }
+        })
+
+        // 只要change发生，就发送ajax请求
+        $("#province").change(function(){
+            //alert("发送ajax请求")
+            //alert(this)
+            //alert(this.value)
+
+            // 发送ajax请求
+            $.ajax({
+                type : "get",
+                url : "/ajax/listArea",
+                data : "t=" + new Date().getTime() + "&pcode=" + this.value,
+                async : true,
+                success : function(jsonArr){
+                    // [{"code":"006", "name":"XXX"},{"code":"008", "name":"YYYY"}]
+                    var html = "<option value=''>--请选择市--</option>";
+                    for (var i = 0; i < jsonArr.length; i++) {
+                        var area = jsonArr[i]
+                        html += "<option value='"+area.code+"'>"+area.name+"</option>"
+                    }
+                    $("#city").html(html)
+                }
+            })
+        })
+    })
+</script>
+
+<select id="province">
+    <!--<option value="">&#45;&#45;请选择省份&#45;&#45;</option>
+    <option value="001">河北省</option>
+    <option value="002">河南省</option>-->
+</select>
+
+<select id="city"></select>
+
+</body>
+</html>

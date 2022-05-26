@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试AJAX乱码问题</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    window.onload = function(){
+
+        // ajax get
+        document.getElementById("btn1").onclick = function(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function (){
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        document.getElementById("mydiv").innerHTML = this.responseText
+                    }
+                }
+            }
+            var username = document.getElementById("username").value
+            xhr.open("GET", "/ajax-encoding/ajaxrequest7?username="+username+"&t=" + new Date().getTime(), true)
+            xhr.send()
+        }
+
+        // ajax post
+        document.getElementById("btn2").onclick = function(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function (){
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        document.getElementById("mydiv").innerHTML = this.responseText
+                    }
+                }
+            }
+            xhr.open("POST", "/ajax-encoding/ajaxrequest7", true)
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+            var username = document.getElementById("username").value
+            xhr.send("username=" + username)
+        }
+    }
+</script>
+
+<input type="text" id="username">
+<button id="btn1">发送ajax get请求，测试乱码问题</button>
+<button id="btn2">发送ajax post请求，测试乱码问题</button>
+
+<div id="mydiv"></div>
+
+
+</body>
+</html>

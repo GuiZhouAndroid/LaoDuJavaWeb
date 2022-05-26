@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json test</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    /*
+    在javascript语言中怎么创建一个json对象呢？语法是什么？
+        var jsonobj = {
+            "属性名1" : 属性值,
+            "属性名2" : 属性值,
+            "属性名3" : 属性值,
+            "属性名4" : 属性值,
+            "属性名5" : 属性值
+        }
+
+        注意：
+            属性值的数据类型，那就随意了。可能是数字，可能是布尔类型，可能是字符串，可能是数组.....
+     */
+
+    /*var user = {
+        "usercode" : 111,
+        "username" : "zhangsan",
+        "sex" : true,
+        "age" : 20,
+        "aihaos" : ["抽烟", "喝酒", "烫头"],
+        "addr" : address
+    }
+
+    // 另一个json对象
+    var address = {
+        "city" : "北京",
+        "street" : "北京大兴区",
+        "zipcode" : "123456"
+    }*/
+
+    var user = {
+        "usercode" : 111,
+        "username" : "zhangsan",
+        "sex" : true,
+        "age" : 20,
+        "aihaos" : ["抽烟", "喝酒", "烫头"],
+        "addr" : {
+            "city" : "北京",
+            "street" : "北京大兴区",
+            "zipcode" : "123456"
+        }
+    }
+
+    // 访问json对象的属性
+    // 第一种方式
+    console.log(user.usercode)
+    console.log(user.username)
+    console.log(user.sex ? "男" : "女")
+    console.log(user.age)
+
+    for (var i = 0; i < user.aihaos.length; i++) {
+        console.log(user.aihaos[i])
+    }
+
+    // 访问这个用户是哪个街道的？
+    console.log(user.addr.street)
+
+
+    // 第二种方式
+    console.log(user["usercode"])
+    console.log(user["username"])
+    console.log(user["sex"] ? "男的" : "女的")
+    console.log(user["age"])
+
+</script>
+
+</body>
+</html>

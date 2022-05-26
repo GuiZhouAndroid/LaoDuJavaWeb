@@ -1,0 +1,58 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ajax">
+    <output-path>$PROJECT_DIR$/out/artifacts/ajax</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ajax" />
+          <element id="module-output" name="ajax-encoding" />
+          <element id="module-output" name="jsp" />
+          <element id="module-output" name="oa01" />
+          <element id="module-output" name="oa02" />
+          <element id="module-output" name="oa04" />
+          <element id="module-output" name="old-request" />
+          <element id="module-output" name="servlet01" />
+          <element id="module-output" name="servlet02" />
+          <element id="module-output" name="servlet03" />
+          <element id="module-output" name="servlet04" />
+          <element id="module-output" name="servlet05" />
+          <element id="module-output" name="servlet06" />
+          <element id="module-output" name="servlet07" />
+          <element id="module-output" name="servlet08" />
+          <element id="module-output" name="servlet09" />
+          <element id="module-output" name="servlet10" />
+          <element id="module-output" name="servlet12" />
+          <element id="module-output" name="servlet13" />
+          <element id="module-output" name="servlet14" />
+          <element id="module-output" name="servlet15" />
+          <element id="module-output" name="servlet16" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib2" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="ajax/web/Web" />
+      <element id="javaee-facet-resources" facet="ajax-encoding/web/Web" />
+      <element id="javaee-facet-resources" facet="jsp/web/Web" />
+      <element id="javaee-facet-resources" facet="oa01/web/Web" />
+      <element id="javaee-facet-resources" facet="oa02/web/Web" />
+      <element id="javaee-facet-resources" facet="oa04/web/Web" />
+      <element id="javaee-facet-resources" facet="old-request/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet01/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet02/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet03/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet04/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet05/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet06/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet07/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet08/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet09/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet10/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet12/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet13/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet14/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet15/web/Web" />
+      <element id="javaee-facet-resources" facet="servlet16/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回顾javascript中的类的定义，对象的创建。属性的访问，方法的访问。</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    // 在JS当中怎么定义一个类。
+    function User(a, b){
+        // 属性
+        this.usercode = a;
+        this.username = b;
+        // 方法（实例方法，通过对象调用的。）
+        this.doSome = function(){
+            console.log(this.username + " doSome....")
+        }
+        // 静态方法（直接用类名调用）
+        User.doOther = function(){
+            console.log("user doOther....")
+        }
+    }
+
+    /*User = function(usercode, username){
+        // 属性
+        this.usercode = usercode;
+        this.username = username;
+        // 方法（实例方法，通过对象调用的。）
+        this.doSome = function(){
+            console.log(username + " doSome....")
+        }
+        // 静态方法（直接用类名调用）
+        User.doOther = function(){
+            console.log("user doOther....")
+        }
+    }*/
+
+    // 创建对象，访问对象的属性，访问对象的方法，访问静态方法
+    // User(); 直接这样调用，你只是把它当做一个普通的函数去执行，不会创建对象，在堆中没有这个对象。
+    // new User(); 这样调用的话，其实就是调用该类的构造方法，创建对象，并且在堆中分配空间。
+    var user = new User("111", "zhangsan");
+    // 访问属性
+    alert(user.usercode + "," + user.username)
+    // 调用方法（实例方法）
+    user.doSome()
+    // 调用静态方法
+    User.doOther()
+
+    // 后期如果想给某个类型扩展方法，还可以使用prototype属性
+    User.prototype.扩展的 = function(){
+        console.log("打印。。。。。")
+    }
+
+    user.扩展的()
+
+
+
+</script>
+
+</body>
+</html>

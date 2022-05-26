@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json test2</title>
+</head>
+<body>
+<!--从后端java程序中响应回来的是json格式的字符串，那么你怎么把json格式的字符串转换成json对象呢？-->
+<script type="text/javascript">
+
+    // 这是一个json对象
+    var user = {
+        "username" : "zhangsan",
+        "password" : "123456"
+    }
+
+    // 是json对象，才能这样访问。
+    alert(user.username + "," + user.password)
+
+    // 从服务器端返回来的不是一个json对象，是一个json格式的字符串
+    var fromJavaServerJsonStr = "{\"usercode\" : 111, \"age\" : 20}"
+
+    // 有两种方式：
+    // 第一种方式：使用eval函数。（这个以前在javascript语言中讲过，这里就不再说了。）
+    // 第二种方式：调用javascript语言中的内置对象JSON的一个方法parse。
+    var jsonobj = JSON.parse(fromJavaServerJsonStr)
+    alert(jsonobj.usercode + "," + jsonobj.age)
+
+
+</script>
+</body>
+</html>

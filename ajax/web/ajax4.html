@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发送ajax post请求</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById("mybtn").onclick = function () {
+            // 发送AJAX POST请求
+            // 1. 创建AJAX核心对象
+            var xhr = new XMLHttpRequest();
+            // 2. 注册回调函数
+            xhr.onreadystatechange = function (){
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        document.getElementById("mydiv").innerHTML = this.responseText
+                    }else{
+                        alert(this.status)
+                    }
+                }
+            }
+            // 3. 开启通道
+            xhr.open("POST", "/ajax/ajaxrequest3", true)
+
+            // 4. 发送请求
+            // 怎么模拟AJAX提交form表单呢？设置请求头的内容类型(这行代码非常关键，是模拟form表单提交的关键代码。)
+            // 设置请求头的内容类型时，必须在open之后。
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+
+            // 放到send()这个函数的小括号当中的数据，会自动在请求体当中提交数据。
+            // 使用JS代码获取用户填写的用户名和密码
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            //xhr.send("注意格式：放在这里的数据就是在请求体当中提交的，格式不能随便来，还是需要遵循HTTP的协议：name=value&name=value&name=value")
+            xhr.send("username="+username+"&password="+password)
+        }
+    }
+</script>
+
+用户名<input type="text" id="username"><br>
+密码<input type="password" id="password"><br>
+
+<button id="mybtn">发送AJAX POST请求</button>
+
+<div id="mydiv"></div>
+
+</body>
+</html>
