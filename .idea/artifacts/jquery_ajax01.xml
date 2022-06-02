@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jquery-ajax01">
+    <output-path>$PROJECT_DIR$/out/artifacts/jquery_ajax01</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="jquery-ajax01/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jquery-ajax01" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

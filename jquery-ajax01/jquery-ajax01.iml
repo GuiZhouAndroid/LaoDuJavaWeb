@@ -11,37 +11,14 @@
         </webroots>
       </configuration>
     </facet>
-    <facet type="JRebel" name="JRebel">
-      <configuration>
-        <option name="ideModuleStorage">
-          <map>
-            <entry key="com.zeroturnaround.jrebel.FormatVersion" value="7.0.0" />
-            <entry key="jrebelEnabled" value="true" />
-          </map>
-        </option>
-        <option name="version" value="5" />
-      </configuration>
-    </facet>
   </component>
-  <component name="NewModuleRootManager">
-    <output url="file://$MODULE_DIR$/../out/production/ajax" />
-    <output-test url="file://$MODULE_DIR$/../out/test/ajax" />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="lib2" level="project" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/MyFilePath/Tomcat/apache-tomcat-10.0.20/lib/jsp-api.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -51,5 +28,16 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/MyFilePath/Tomcat/apache-tomcat-10.0.20/lib/jsp-api.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="fastjson-1.2.2 (2)" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-8.0.28 (2)" level="project" />
   </component>
 </module>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    <!--   页面加载好了执行onload事件后,主动发起AJAX请求 -->
+    $(function () {
+        let $province = $("#province");
+        //1.ajax()函数get方式
+        // $.ajax({
+        //     url: "/jquery/my/province",
+        //     type:"get",
+        //     data : "t=" + new Date().getTime(),
+        //     dataType: "json",
+        //     success: function (jsonArr) {
+        //         $province.empty();//删除append追加的旧子标签的option数据
+        //         $province.append("<option value=''>--请选择省份--</option>");
+        //         $.each(jsonArr, function (index, province) {
+        //             $province.append("<option value='" + province.id + "'>" + province.name + "</option>");
+        //         })
+        //     }
+        // })
+        //2.get()函数方式
+        $.get(
+            "/jquery/my/province",
+            {"t": new Date().getTime()},
+            function (ProvinceArray) {
+                $province.empty();//删除append追加的旧子标签的option数据
+                $province.append("<option value=''>--请选择省份--</option>");
+                $.each(ProvinceArray, function (index, province) {
+                    $province.append("<option value='" + province.id + "'>" + province.name + "</option>");
+                })
+            }
+            , "json");
+
+        $province.change(function () {
+            let $city = $("#city");
+            //value值 == $option.val() 、文本值 == $option.text()
+            let $option = $("#province>option:selected");
+            //3.ajax()函数post方式
+            // $.ajax({
+            //     url: "/jquery/my/city",
+            //     type:"post",
+            //     data:{"t":new Date().getTime(),"pro_id":$option.val()},
+            //     dataType: "json",
+            //     success: function (jsonArr) {
+            //         $city.empty();//删除append追加的旧子标签的option数据
+            //         $city.append("<option value=''>--请选择市--</option>");
+            //         $.each(jsonArr, function (index, city) {
+            //             $city.append("<option value='" + city.id + "'>" + city.name + "</option>");
+            //         })
+            //     }
+            // })
+            //4.post()函数方式
+            $.post("/jquery/my/city",
+                {"t": new Date().getTime(), "pro_id": $option.val()},
+                callback ,
+                "json");
+
+            //定义一个处理返回数据的函数
+            function callback(cityArray){
+                $city.empty();//删除append追加的旧子标签的option数据
+                $city.append("<option value=''>--请选择市--</option>");
+                $.each(cityArray, function (index, city) {
+                    $city.append("<option value='" + city.id + "'>" + city.name + "</option>");
+                })
+            }
+        })
+    })
+
+</script>
+
+<select id="province"></select>
+<select id="city"></select>
+</body>
+</html>

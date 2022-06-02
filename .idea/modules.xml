@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/ajax/ajax.iml" filepath="$PROJECT_DIR$/ajax/ajax.iml" />
       <module fileurl="file://$PROJECT_DIR$/ajax-encoding/ajax-encoding.iml" filepath="$PROJECT_DIR$/ajax-encoding/ajax-encoding.iml" />
       <module fileurl="file://$PROJECT_DIR$/fastjson/fastjson.iml" filepath="$PROJECT_DIR$/fastjson/fastjson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jquery-ajax01/jquery-ajax01.iml" filepath="$PROJECT_DIR$/jquery-ajax01/jquery-ajax01.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsp/jsp.iml" filepath="$PROJECT_DIR$/jsp/jsp.iml" />
       <module fileurl="file://$PROJECT_DIR$/myweb/myweb.iml" filepath="$PROJECT_DIR$/myweb/myweb.iml" />
       <module fileurl="file://$PROJECT_DIR$/oa01/oa01.iml" filepath="$PROJECT_DIR$/oa01/oa01.iml" />

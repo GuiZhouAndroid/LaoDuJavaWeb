@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="fastjson-1.2.2 (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jquery-ajax01/web/WEB-INF/lib/fastjson-1.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jquery-ajax01/web/WEB-INF/lib/mysql-connector-java-8.0.26.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
